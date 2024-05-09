@@ -1,0 +1,35 @@
+Algoritmo "Lerate10notas"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Anderson Meurer
+// Descrição   : Ler até 10 notas de aluno
+// Autor(a)    : José Evnagelista da Silva Filho
+// Data atual  : 09/05/2024
+Var
+   i: inteiro
+   notas: vetor [0..9] de inteiro
+   notalida: inteiro
+   media: inteiro
+
+Inicio
+      para i de 0 até 9 faca
+           Escreva ("Digite a nota do aluno ou digite um valor negativo para parar o programa: ")
+           leia (notas[i])
+           notalida := notas [i] + 1
+           
+           se (notalida >= 0) e (notalida <= 10) entao
+              media := media + notalida
+           senao
+              interrompa
+           fimse
+      fimpara
+      
+      se (media >= 0) e (media <= 3) entao
+           Escreval ("Reprovado!")
+      fimse
+      se (media >= 4) e (media <= 6) entao
+           Escreval ("Em exame!")
+      fimse
+      se (media >= 7) entao
+           Escreval ("Aprovado!")
+      fimse
+Fimalgoritmo
